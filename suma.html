@@ -1,0 +1,103 @@
+<html>
+
+<head>
+
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+</head>
+
+<body style="padding-top: 700px;">
+      <div id="about" class="container ty" style="padding-top: 100px">
+            <h2 class="text-white text1" data-aos="fade-in">ABOUT ME</h2>
+            <h4 class="text2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis est aut
+                  earum consequatur non, totam nobis expedita suscipit ipsum
+                  necessitatibus hic? Repudiandae, quisquam aliquam corrupti qui deserunt
+                  delectus accusantium ratione! Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Magni repudiandae consequuntur rerum voluptatem ad
+                  iste, atque ex quo tempora fuga voluptatum asperiores vitae. Illum,
+                  error! Quas odit pariatur ipsum sequi!
+            </h4>
+      </div>
+
+
+
+      <div id="about" class="container reveal" style="padding-top: 100px">
+            <h2 class="text-white box  " style="font-style: italic">ABOUT ME</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, eos ducimus tempora a vitae
+            aspernatur facere provident assumenda, laudantium sit libero laborum ab maxime debitis
+            exercitationem, quo voluptates delectus! Nesciunt!Loremloren
+
+      </div>
+</body>
+
+</html>
+
+<script>
+      AOS.init();
+</script>
+<script type="text/javascript">
+      window.addEventListener('scroll', reveal)
+      function reveal() {
+            var reveals = document.querySelectorAll('.reveal')
+            for (var i = 0; i < reveals.length; i++) {
+                  var windowheight = window.innerHeight;
+                  var revealtop = reveals[i].getBoundingClientRect().top
+                  var revealpoint = 150;
+                  if (revealtop < windowheight - revealpoint) {
+                        reveals[i].classList.add('active');
+                  }
+                  else {
+                        reveals[i].classList.remove('active');
+                  }
+            }
+
+      }
+
+</script>
+<style>
+      .container {
+            display: inline-block;
+      }
+
+      .text1 {
+            font-size: 6vh;
+            letter-spacing: 7px;
+            margin-bottom: 60px;
+            animation: text 3s 1;
+      }
+
+      .reveal {
+            position: relative;
+            transform: translateY(150px);
+            transition: all 2s ease;
+      }
+
+      .reveal.active {
+
+            transform: translateY(0px);
+            opacity: 1;
+      }
+
+
+      @keyframes text {
+            0% {
+                  color: black;
+                  margin-bottom: -60px;
+            }
+
+            30% {
+                  letter-spacing: 25px;
+                  margin-bottom: -60px;
+            }
+
+            80% {
+                  letter-spacing: 8px;
+
+                  margin-bottom: -60px;
+            }
+      }
+</style>
